@@ -1,18 +1,15 @@
+//App.tsx
 import * as React from 'react';
 
-import { StyleSheet, View, Text } from 'react-native';
-import { multiply } from '@shimeuisuk/simicocobab';
+import { StyleSheet, View } from 'react-native';
+import { Typography } from '@shimeuisuk/simicocobab';
 
 export default function App() {
-  const [result, setResult] = React.useState<number | undefined>();
-
-  React.useEffect(() => {
-    multiply(3, 7).then(setResult);
-  }, []);
-
   return (
     <View style={styles.container}>
-      <Text>Result: {result}</Text>
+      <Typography fontSize={20} color="black">
+        Result: hello world
+      </Typography>
     </View>
   );
 }
@@ -22,10 +19,5 @@ const styles = StyleSheet.create({
     flex: 1,
     alignItems: 'center',
     justifyContent: 'center',
-  },
-  box: {
-    width: 60,
-    height: 60,
-    marginVertical: 20,
   },
 });
